@@ -1,17 +1,123 @@
-body {
-    text-align: center;
+/* 画面幅が1000px以上のデバイス向けのスタイル */
+@media (min-width: 1001px) {
+    body {
+        text-align: center;
+        /* overflow: hidden; */
+    }
+    #step1, #step2, #step3, #step4, #step5, button:not(#finish):not(#step6 button) {
+        width: 90%; /* ボタンと入力フィールドの幅 */
+        padding: 15px; /* 内側の余白 */
+        margin: 15px auto; /* 上下のマージンと中央寄せ */
+        display: block; /* ブロックレベル要素 */
+        font-size: 1.2em; /* 文字サイズ */
+        min-height: 60px; /* ボタンと入力フィールドの最小の縦幅 */
+    }
+    #namesInput {
+        width: calc(90% - 32px); /* 既存の幅設定を維持 */
+        padding: 20px; /* 内側のパディングを増やす */
+        font-size: 2.0em; /* フォントサイズを大きくする */
+        min-height: 50px; /* 入力フィールドの最小の縦幅を大きくする */
+        margin: 10px auto; /* 中央揃えのためのマージン */
+        display: block; /* ブロックレベル要素として表示 */
+    }
+    #step6 {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 90%; /* ボタンと入力フィールドの幅 */
+        padding: 15px; /* 内側の余白 */
+        margin: 10px auto; /* 上下のマージンと中央寄せ */
+        display: block; /* ブロックレベル要素 */
+        font-size: 1.2em; /* 文字サイズ */
+        min-height: 30px; /* ボタンと入力フィールドの最小の縦幅 */
+    }
+    
+    .button-column {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+    
+    .button-column button {
+        width: 20%; /* ボタンの幅を親要素に合わせる */
+        padding: 5px;
+        margin: 10px auto;
+        display: block;
+        font-size: 1.2em;
+        min-height: 60px;
+    }
+    
+    
+    #finish {
+        padding: 5px 15px; /* 終了ボタンのパディング */
+        font-size: 1.6em; /* 終了ボタンの文字サイズ */
+        display: block; /* ブロックレベル要素に設定 */
+        margin: 10px auto; /* 上下のマージンを10px、左右のマージンを自動に設定 */
+        width: auto; /* ボタンの幅を内容に応じて自動調整 */
+        min-height: 50px; /* 終了ボタンの最小の縦幅 */
+    }
 }
-#step1, #step2, #step3, #step4, #step5, #step6, button:not(#finish) {
-    width: 50%; /* ボタンと入力フィールドの幅 */
-    padding: 15px; /* 内側の余白 */
-    margin: 10px auto; /* 上下のマージンと中央寄せ */
-    display: block; /* ブロックレベル要素 */
-    font-size: 1.2em; /* 文字サイズ */
+
+/* スマートフォン向けのスタイル */
+@media (max-width: 1000px) {
+    body {
+        text-align: center;
+        /* overflow: hidden; */
+    }
+    #step1, #step2, #step3, #step4, #step5, button:not(#finish):not(#step6 button) {
+        width: 90%; /* ボタンと入力フィールドの幅 */
+        padding: 15px; /* 内側の余白 */
+        margin: 60px auto; /* 上下のマージンと中央寄せ */
+        display: block; /* ブロックレベル要素 */
+        font-size: 2.2em; /* 文字サイズ */
+        min-height: 300px; /* ボタンと入力フィールドの最小の縦幅 */
+    }
+    #namesInput {
+        width: calc(90% - 32px); /* 既存の幅設定を維持 */
+        padding: 20px; /* 内側のパディングを増やす */
+        font-size: 2.0em; /* フォントサイズを大きくする */
+        min-height: 50px; /* 入力フィールドの最小の縦幅を大きくする */
+        margin: 10px auto; /* 中央揃えのためのマージン */
+        display: block; /* ブロックレベル要素として表示 */
+    }
+    #step6 {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 90%; /* ボタンと入力フィールドの幅 */
+        padding: 15px; /* 内側の余白 */
+        margin: 10px auto; /* 上下のマージンと中央寄せ */
+        display: block; /* ブロックレベル要素 */
+        font-size: 2.4em; /* 文字サイズ */
+        min-height: 300px; /* ボタンと入力フィールドの最小の縦幅 */
+    }
+    
+    .button-column {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 5px;
+    }
+    
+    .button-column button {
+        width: 40%; /* ボタンの幅を親要素に合わせる */
+        padding: 15px;
+        margin: 40px auto;
+        display: block;
+        font-size: 2.2em;
+        min-height: 600px;
+    }
+    
+    
+    #finish {
+        padding: 5px 15px; /* 終了ボタンのパディング */
+        font-size: 3.2em; /* 終了ボタンの文字サイズ */
+        display: block; /* ブロックレベル要素に設定 */
+        margin: 10px auto; /* 上下のマージンを10px、左右のマージンを自動に設定 */
+        width: auto; /* ボタンの幅を内容に応じて自動調整 */
+        min-height: 200px; /* 終了ボタンの最小の縦幅 */
+    }
+    
 }
-#namesInput {
-    width: calc(50% - 32px); /* パディングとボーダーを考慮した幅 */
-}
-#finish {
-    padding: 5px 15px; /* 終了ボタンのパディング */
-    font-size: 0.8em; /* 終了ボタンの文字サイズ */
-}
+

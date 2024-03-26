@@ -49,18 +49,26 @@
     <!-- シュート位置選択 -->
     <div id="step6" style="display: none;">
         <h3>シュート位置の選択</h3>
-        <button onclick="selectPosition('1')">1</button>
-        <button onclick="selectPosition('2')">2</button>
-        <button onclick="selectPosition('3')">3</button>
-        <button onclick="selectPosition('4')">4</button>
-        <button onclick="selectPosition('5')">5</button>
-        <button onclick="selectPosition('6')">6</button>
-        <button onclick="selectPosition('7')">7</button>
-        <button onclick="selectPosition('8')">8</button>
-        <button onclick="selectPosition('9')">9</button>
-        <button onclick="selectPosition('1')">1</button>
-
-        <!-- 他の位置ボタンも同様に -->
+        <div class="button-column">
+            <button onclick="selectPosition('1')">1</button>
+            <button onclick="selectPosition('6')">6</button>
+        </div>
+        <div class="button-column">
+            <button onclick="selectPosition('2')">2</button>
+            <button onclick="selectPosition('7')">7</button>
+        </div>
+        <div class="button-column">
+            <button onclick="selectPosition('3')">3</button>
+            <button onclick="selectPosition('8')">8</button>
+        </div>
+        <div class="button-column">
+            <button onclick="selectPosition('4')">4</button>
+            <button onclick="selectPosition('9')">9</button>
+        </div>
+        <div class="button-column">
+            <button onclick="selectPosition('5')">5</button>
+            <button onclick="selectPosition('枠外')">枠外</button>
+        </div>
     </div>
 
     <button id="finish" style="display: none;" onclick="downloadCSV()">終了</button>

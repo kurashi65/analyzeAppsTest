@@ -85,6 +85,14 @@ function downloadCSV() {
     link.click();
     document.body.removeChild(link);
 }
+function adjustBodyHeight() {
+    var height = window.innerHeight; // ブラウザのビューポートの高さを取得
+    document.body.style.height = height + 'px'; // bodyの高さを設定
+}
+
+// ページ読み込み時とウィンドウサイズ変更時に高さを調整
+window.onload = adjustBodyHeight;
+window.onresize = adjustBodyHeight;
 
 
 // 各select関数の中で、最後の選択後にaddToDataを呼び出し、終了時にdownloadCSVを呼び出す
