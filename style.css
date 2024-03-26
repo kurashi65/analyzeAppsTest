@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+#step1, #step2, #step3, #step4, #step5, #step6, button:not(#finish) {
+    width: 50%; /* ボタンと入力フィールドの幅 */
+    padding: 15px; /* 内側の余白 */
+    margin: 10px auto; /* 上下のマージンと中央寄せ */
+    display: block; /* ブロックレベル要素 */
+    font-size: 1.2em; /* 文字サイズ */
+}
+#namesInput {
+    width: calc(50% - 32px); /* パディングとボーダーを考慮した幅 */
+}
+#finish {
+    padding: 5px 15px; /* 終了ボタンのパディング */
+    font-size: 0.8em; /* 終了ボタンの文字サイズ */
+}

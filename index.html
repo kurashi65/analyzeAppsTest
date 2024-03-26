@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>データ記録アプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 入力フォーム -->
+    <div id="step1">
+        <input type="text" id="namesInput" placeholder="名前を入力（スペース区切り）" />
+        <button onclick="setNames()">決定</button>
+    </div>
+
+    <!-- 人選択 -->
+    <div id="step2" style="display: none;">
+        
+    </div>
+
+    <!-- 種類選択 -->
+    <div id="step3" style="display: none;">
+        <h3>種類の選択</h3>
+        <button onclick="selectType('インター')">インター</button>
+        <button onclick="selectType('キープミス')">キープミス</button>
+        <button onclick="selectType('DFプレッシャー')">DFプレッシャー</button>
+        <button onclick="selectType('通らない')">通らない</button>
+    </div>
+
+    <!-- 手選択 -->
+    <div id="step4" style="display: none;">
+        <h3>手の選択</h3>
+        <button onclick="selectHand('右')">右</button>
+        <button onclick="selectHand('左')">左</button>
+    </div>
+
+    <!-- シュートコース選択 -->
+    <div id="step5" style="display: none;">
+        <h3>シュートコースの選択</h3>
+        <button onclick="selectCourse('A')">A</button>
+        <button onclick="selectCourse('B')">B</button>
+        <button onclick="selectCourse('C')">C</button>
+        <button onclick="selectCourse('D')">D</button>
+        <button onclick="selectCourse('E')">E</button>
+        <button onclick="selectCourse('F')">F</button>
+        <!-- 他のコースボタンも同様に -->
+    </div>
+
+    <!-- シュート位置選択 -->
+    <div id="step6" style="display: none;">
+        <h3>シュート位置の選択</h3>
+        <button onclick="selectPosition('1')">1</button>
+        <button onclick="selectPosition('2')">2</button>
+        <button onclick="selectPosition('3')">3</button>
+        <button onclick="selectPosition('4')">4</button>
+        <button onclick="selectPosition('5')">5</button>
+        <button onclick="selectPosition('6')">6</button>
+        <button onclick="selectPosition('7')">7</button>
+        <button onclick="selectPosition('8')">8</button>
+        <button onclick="selectPosition('9')">9</button>
+        <button onclick="selectPosition('1')">1</button>
+
+        <!-- 他の位置ボタンも同様に -->
+    </div>
+
+    <button id="finish" style="display: none;" onclick="downloadCSV()">終了</button>
+
+    <!-- JavaScriptの読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>
